@@ -1,0 +1,322 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*USERBAR*//*USERBAR*//*USERBAR*//*USERBAR*//*USERBAR*//*USERBAR*//*USERBAR*//*USERBAR*//*USERBAR*//*USERBAR*//*USERBAR*//*USERBAR*//*USERBAR*//*USERBAR*//*USERBAR*/
+
+.userbar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 25px;
+  opacity: 0.5;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  color: black;
+
+}
+
+.userbarid{
+margin-left: 20px;
+margin: 5px;
+}
+
+.userbarname{
+  margin-left: 20px;
+  margin: 5px;
+  font-weight: bolder;
+}
+
+/*FRONT PAGE*//*FRONT PAGE*//*FRONT PAGE*//*FRONT PAGE*//*FRONT PAGE*//*FRONT PAGE*//*FRONT PAGE*//*FRONT PAGE*//*FRONT PAGE*//*FRONT PAGE*//*FRONT PAGE*//*FRONT PAGE*/
+
+.frontpage{
+  background-image: url('./images/icecream.jpg');
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1{
+  /*IMPORTANT THSESE TOP TWO*/
+    background-clip: text;
+    color: transparent;
+  /*IMPORTANT THSESE TOP TWO*/
+  
+    font-family: 'Fascinate Inline';
+  background-size: 100%;
+  background-image: linear-gradient( white,#87f1ff );
+  filter: drop-shadow(2px 9px #0085a3);
+  font-size: 70px;
+  font-weight: 400;
+  
+  }
+
+  .spanish{
+    /*IMPORTANT THSESE TOP TWO*/
+    background-clip: text;
+    color: transparent;
+    /*IMPORTANT THSESE TOP TWO*/
+    background-image: linear-gradient(yellow 45%, red 70%);
+    font-family: 'Fascinate Inline';
+    background-size: 100%;
+    filter: drop-shadow(2px 2px #0085a3);
+    font-size: 70px;
+    font-weight: 400;
+    }
+
+    #icecreamicon{
+      background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(0deg,red 0%,  yellow 45%, red 100%);
+      cursor: pointer;
+      
+      box-shadow: 0 1px 2px rgba(0,0,0,0.17), 
+      0 2px 4px rgba(0,0,0,0.17), 
+      0 4px 8px rgba(0,0,0,0.17), 
+      0 8px 16px rgba(0,0,0,0.17),
+      0 16px 32px rgba(0,0,0,0.17), 
+      0 32px 64px rgba(0,0,0,0.17);
+}
+
+
+#icecreamicon:active{
+ transform: scale(96%);
+}
+
+    h3{
+      transform: translateY(-130px);
+      pointer-events: none;
+    }
+
+    /*FORM FRONT PAGE*/ /*FORM FRONT PAGE*/ /*FORM FRONT PAGE*/ /*FORM FRONT PAGE*/ /*FORM FRONT PAGE*/ /*FORM FRONT PAGE*/ /*FORM FRONT PAGE*/ /*FORM FRONT PAGE*/
+
+    .userform{
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      font-family: 'press start 2p';
+      background-color: rgb(44, 43, 43);
+      color: rgb(0, 150, 0, 0.75);
+      width: 100%;
+      font-size: 1.5rem;
+      background-image: radial-gradient(
+        rgba(0, 150, 0, 0.25), black 120%
+      );
+    }
+    
+    ::placeholder{
+      color: rgb(0, 150, 0, 0.75);
+    }
+    .usernameinput{
+      height: 40px;
+      width: 50%;
+      color: rgb(0, 150, 0, 0.75);
+      font-size: 1.5rem;
+      font-family: 'press start 2p';
+    }
+    
+    .username{
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-left: 40px;
+    }
+    .avail{
+      padding-left: 60px;
+    
+    }
+    .age{
+      padding-top: 30px;
+      padding-left: 60px;
+    }
+    .radioanswers{
+      padding-left: 60px;;
+    }
+    .radio{
+      padding-bottom: 50px;
+    }
+    
+    .circle{
+      padding-left: 50px;
+    }
+    .dot{
+      transform: scale(2)  ;  
+    }
+    .labels{
+      padding-top: 30px;
+      padding-left: 60px;
+    }
+    
+    .selectcountry{
+      margin-left: 60px;
+    width: 50%;
+    height: 50px;
+    font-size: 1.5rem;
+    font-family: 'press start 2p';
+    color:rgb(0, 150, 0, 0.75);
+    margin-bottom: 100px;
+    }
+    
+    .petanswers{
+      margin-left: 60px;
+    }
+    
+    #cat{
+      margin-top: 50px;
+    }
+    .colour{
+      margin-top: 50px;
+    
+      margin-left: 60px;
+    }
+    
+    .slidingtext{
+      margin-left: 60px;
+      margin-top: 100px;
+    }
+    
+    .slider{
+      margin-bottom: 100px;
+      margin-left: 60px;
+      margin-right: 60px;
+      background-color: green;
+      height: 30px;
+    
+      -webkit-appearance: none;
+    
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+    
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      background: #04AA6D;
+      cursor: pointer;
+    }
+    
+    .submitform{
+      width: 40%;
+      align-self: center;
+      margin-top: 200px;
+      margin-bottom: 300px;
+      font-size: 5rem;
+      font-weight: 900;
+      font-family: 'press start 2p';
+      color: rgb(0, 150, 0, 0.75);
+      background: rgb(44, 43, 43);
+    }
+    
+
+     /*PETS*/   /*PETS*/   /*PETS*/   /*PETS*/   /*PETS*/   /*PETS*/   /*PETS*/   /*PETS*/   /*PETS*/   /*PETS*/   /*PETS*/   /*PETS*/   /*PETS*/   /*PETS*/   /*PETS*/ 
+     .pets{
+      background-image: url('./images/catndog.jpg');
+      height: 100vh;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: space-evenly
+     }
+     .h2questions{
+       margin-bottom: 100px;
+       font-size: 3rem;
+       color:black;
+       background-color: blanchedalmond;
+       opacity: 0.5;
+      
+     }
+     .circlequestions{
+      padding-left: 50px;
+      padding-right: 50px;
+      font-size: 3rem;
+      background-color: blanchedalmond;
+      opacity: 0.5;
+      transform: translateY(200px);
+    }
+    .dotquestions{
+      transform: scale(3)  ;  
+    }
+
+    /*PINEAPPLE*/ /*PINEAPPLE*/ /*PINEAPPLE*/ /*PINEAPPLE*/ /*PINEAPPLE*/ /*PINEAPPLE*/ /*PINEAPPLE*/ /*PINEAPPLE*/ /*PINEAPPLE*/ /*PINEAPPLE*/ 
+
+    .pineapple{
+      background-image: url('./images/pizza.jpg');
+      height: 100vh;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: space-evenly
+     }
+    .colour{
+      margin-top: 50px;
+      margin-left: 60px;
+      font-size: 3rem;
+      background-color: blanchedalmond;
+      opacity: 0.5;
+    }
+    
+    .slidingtext{
+      margin-left: 60px;
+      margin-top: 100px;
+      font-size: 3rem;
+      background-color: blanchedalmond;
+      opacity: 0.5;
+    }
+    
+    .slider{
+      width: 80%;
+      margin-bottom: 100px;
+      margin-left: 60px;
+      margin-right: 60px;
+      background-color: green;
+      height: 30px;
+    
+      -webkit-appearance: none;
+    
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+    
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      background: #04AA6D;
+      cursor: pointer;
+    }
+    
+    /*COLOUR*/ /*COLOUR*//*COLOUR*//*COLOUR*//*COLOUR*//*COLOUR*//*COLOUR*//*COLOUR*//*COLOUR*//*COLOUR*//*COLOUR*//*COLOUR*//*COLOUR*//*COLOUR*//*COLOUR*//*COLOUR*/
+
+    .colours{
+      background-image: url('./images/colours.jpg');
+      height: 100vh;
+      background-size: contain;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: space-evenly
+     }
