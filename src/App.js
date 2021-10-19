@@ -7,6 +7,7 @@ import Colours from './components/form/Colours';
 import Pets from './components/form/Pets';
 import Pineapple from './components/form/Pineapple';
 import Quiz from './components/Quiz';
+import QuizContextProvider from './context/QuizContext';
 
 
 
@@ -15,30 +16,34 @@ function App() {
     <Router>
 
         <UserContextProvider>
-          
-                    <div className="App">
-                    <Switch>
-                          <Route exact path='/'>
-                              <FrontPage></FrontPage>
-                          </Route>
-                          <Route exact path='/formfrontpage'>
-                              <FormFrontPage></FormFrontPage>
-                          </Route>
-                          <Route exact path='/pets'>
-                            <Pets></Pets>
-                          </Route>
-                          <Route exact path='/colours'>
-                            <Colours ></Colours>
-                          </Route>
-                          <Route exact path='/pineapple'>
-                            <Pineapple ></Pineapple>
-                          </Route>
-                          <Route exact path='/quiz'>
-                            <Quiz></Quiz>
-                          </Route>
-                    </Switch>
-                    </div>
+                          <div className="App">
+                          <Switch>
+                                <Route exact path='/'>
+                                    <FrontPage></FrontPage>
+                                </Route>
+                                <Route exact path='/formfrontpage'>
+                                    <FormFrontPage></FormFrontPage>
+                                </Route>
+                                <Route exact path='/pets'>
+                                  <Pets></Pets>
+                                </Route>
+                                <Route exact path='/colours'>
+                                  <Colours ></Colours>
+                                </Route>
+                                <Route exact path='/pineapple'>
+                                  <Pineapple ></Pineapple>
+                                </Route>
 
+                                    <QuizContextProvider>
+
+                                    <Route exact path='/quiz'>
+                                      <Quiz></Quiz>
+                                    </Route>
+
+                                    </QuizContextProvider>
+
+                          </Switch>
+                          </div>
           </UserContextProvider>
 
     </Router>

@@ -8,6 +8,7 @@ export const UserContext = createContext();
 const UserContextProvider = (props) => {
 
 
+
 // STATE // STATE// STATE// STATE// STATE// STATE// STATE// STATE// STATE// STATE// STATE// STATE// STATE// STATE// STATE// STATE// STATE// STATE// STATE// STATE// STATE
 
     //Username for global display from userform submit
@@ -40,6 +41,13 @@ const UserContextProvider = (props) => {
 //IS USERNAME AVAILABALE
     const [userNameAvailable, setUserNameAvailable] = useState(false);
 
+//delete global use asnd id on start
+const handleStart = () => {
+    setGlobalUserName(null);
+    setGlobalUserNameID(null);
+
+}
+
 
 //USER FORM SUBMIT//USER FORM SUBMIT//USER FORM SUBMIT//USER FORM SUBMIT//USER FORM SUBMIT//USER FORM SUBMIT//USER FORM SUBMIT//USER FORM SUBMIT//USER FORM SUBMIT
     
@@ -55,11 +63,20 @@ const handleSubmitCreateUser =(e) => {
 
 // EXTRA INFO TO  DB// EXTRA INFO TO  DB// EXTRA INFO TO  DB// EXTRA INFO TO  DB// EXTRA INFO TO  DB// EXTRA INFO TO  DB// EXTRA INFO TO  DB// EXTRA INFO TO  DB
 
+// const handleExtraInfoClick = async () => {
+//     const docRef = doc(db, 'users', globalUserNameID );
+//     const payload = {...user, pet, colour, pizza}
+//   await setDoc(docRef, payload);
+// }
+
 const handleExtraInfoClick = async () => {
     const docRef = doc(db, 'users', globalUserNameID );
     const payload = {...user, pet, colour, pizza}
   await setDoc(docRef, payload);
 }
+
+//
+
 
 //ON USER CHANGE - CREATE GOLBAL USERNAME
 useEffect(() => {
@@ -103,36 +120,30 @@ useEffect(() => {
 
  useEffect(() => {
     databaseList.forEach(user => {
-     if (user.userNameInput == globalUserName){
+     if (globalUserName && user.userNameInput == globalUserName){
          setGlobalUserNameID(user.id); 
+         console.log('yyy');
+         console.log('yyy');
+         console.log(user.userNameInput);
+         console.log(globalUserName);
+         console.log('yyy');
+         
+         console.log('yyy');
      } 
  })
  }, [databaseList])
+ //datebaseList
 
- //setusernameform DB , not state
+ //setusername from DB , not state
 
  useEffect(() => {
     databaseList.forEach(user => {
-    //  if (user.id == globalUserNameID){
-    //      setGlobalUserName(user.userNameInput); 
-    //      console.log(user.userNameInput);
-    //      console.log(user.userNameInput);
-
-    //      console.log(user.userNameInput);
-    //      console.log(user.userNameInput);
-    //      console.log(user.userNameInput);
-    //      console.log(user.userNameInput);
-    //      console.log(user.userNameInput);
-    //      console.log(user.userNameInput);
-    //      console.log(user.userNameInput);
-         console.log(user.id);
-         console.log(globalUserNameID);
-         console.log(databaseList);
          if (user.id == globalUserNameID)
          {setGlobalUserName(user.userName)}
     //  } 
  })
- }, [globalUserNameID])
+ }, [])
+ //gloablUsernameID
 
 //RETURN //RETURN //RETURN //RETURN //RETURN //RETURN //RETURN //RETURN //RETURN //RETURN //RETURN //RETURN //RETURN //RETURN //RETURN //RETURN //RETURN //RETURN //RETURN 
 return (
@@ -157,6 +168,7 @@ return (
         globalUserName,
         handleExtraInfoClick,
         globalUserNameID,
+        handleStart,
     }}>
         {props.children}
     </UserContext.Provider>
